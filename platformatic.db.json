@@ -7,7 +7,8 @@
       "level": "{PLT_SERVER_LOGGER_LEVEL}"
     },
     "cors": {
-      "origin": "*",
+      "origin": "{PLT_CORS_ORIGIN}",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
       "preflightContinue": false,
       "optionsSuccessStatus": 204
     }
