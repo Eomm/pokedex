@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS color (
   name TEXT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS "type" (
+CREATE TABLE IF NOT EXISTS element (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL
 );
@@ -36,12 +36,12 @@ CREATE TABLE IF NOT EXISTS pokemon (
   FOREIGN KEY (evolution_chain_id) REFERENCES evolution_chain(id)
 );
 
-CREATE TABLE IF NOT EXISTS pokemon_type (
+CREATE TABLE IF NOT EXISTS pokemon_element (
   pokemon_id INTEGER NOT NULL,
-  type_id INTEGER NOT NULL,
-  PRIMARY KEY (pokemon_id, type_id),
-  FOREIGN KEY (pokemon_id) REFERENCES pokemon(id),
-  FOREIGN KEY (type_id) REFERENCES "type"(id)
+  element_id INTEGER NOT NULL,
+  CONSTRAINT a FOREIGN KEY (pokemon_id) REFERENCES pokemon(id),
+  CONSTRAINT b FOREIGN KEY (element_id) REFERENCES element(id),
+  PRIMARY KEY (pokemon_id, element_id)
 );
 
 CREATE TABLE IF NOT EXISTS picture (

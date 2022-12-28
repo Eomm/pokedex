@@ -104,12 +104,8 @@ function processData (data) {
     const gen = pokemon.specy.generation_id
     const evolutionChainId = pokemon.specy.evolutions?.id || null
 
-    const pictures = JSON.parse(pokemon.images[0].sprites)
-
-    let link = pictures?.other?.['official-artwork'].front_default
-    if (!link) {
-      link = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
-    }
+    // const link = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`
+    const link = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
 
     sqlColors.add(`INSERT INTO color (id, name) VALUES (${colorId}, '${pokemon.specy.color.name}');`)
     if (evolutionChainId) {
@@ -124,8 +120,8 @@ function processData (data) {
 
     pokemon.types.forEach(type => {
       const typeId = type.type.id
-      sqlTypes.add(`INSERT INTO "type" (id, name) VALUES (${typeId}, '${type.type.name}');`)
-      sqlPokemon.add(`INSERT INTO pokemon_type (pokemon_id, type_id) VALUES (${pokemon.id}, ${typeId});`)
+      sqlTypes.add(`INSERT INTO element (id, name) VALUES (${typeId}, '${type.type.name}');`)
+      sqlPokemon.add(`INSERT INTO pokemon_element (pokemon_id, element_id) VALUES (${pokemon.id}, ${typeId});`)
     })
   })
 

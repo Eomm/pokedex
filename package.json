@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "platformatic db start",
-    "db:migrations": "platformatic db migrations apply"
+    "db:migrations": "platformatic db migrations apply",
+    "db:types": "platformatic db types"
   },
   "devDependencies": {
     "fastify": "^4.10.2",

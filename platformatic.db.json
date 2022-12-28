@@ -5,6 +5,11 @@
     "port": "{PORT}",
     "logger": {
       "level": "{PLT_SERVER_LOGGER_LEVEL}"
+    },
+    "cors": {
+      "origin": "*",
+      "preflightContinue": false,
+      "optionsSuccessStatus": 204
     }
   },
   "core": {

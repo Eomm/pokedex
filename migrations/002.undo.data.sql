@@ -4,5 +4,5 @@ TRUNCATE TABLE picture;
 TRUNCATE TABLE pokemon_type;
 TRUNCATE TABLE evolution_step;
 TRUNCATE TABLE evolution_chain;
-TRUNCATE TABLE "type";
+TRUNCATE TABLE element;
 TRUNCATE TABLE color;
