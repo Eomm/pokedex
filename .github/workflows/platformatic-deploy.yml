@@ -12,7 +12,7 @@ jobs:
       - name: Checkout application project repository
         uses: actions/checkout@v3
       - name: Build UI
-        run:
+        run: |
           cd pokedex-ui
           npm install
           npm run build
