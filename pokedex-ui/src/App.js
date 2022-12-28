@@ -1,13 +1,10 @@
 
-import { useState, useEffect } from 'react';
-
+import { useState } from 'react';
 
 import Logo from './PokemonLogo';
 import Results from './Results';
 import Types from './Types'
 import './App.css';
-
-
 
 function App() {
   const [searchPokemon, setSearchPokemon] = useState('');

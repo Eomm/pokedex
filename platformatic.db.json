@@ -12,10 +12,13 @@
       "optionsSuccessStatus": 204
     }
   },
+  "dashboard": false,
   "core": {
     "connectionString": "{DATABASE_URL}",
-    "graphql": true,
-    "openapi": true
+    "graphql": {
+      "graphiql": "{PLT_DEV_MODE}"
+    },
+    "openapi": "{PLT_DEV_MODE}"
   },
   "migrations": {
     "dir": "migrations"

@@ -115,7 +115,7 @@ function processData (data) {
       })
     }
 
-    sqlPokemon.add(`INSERT INTO pokemon (name, height, weight, is_baby, generation, is_legendary, is_mythical, color_id, evolution_chain_id) VALUES ('${name}', ${height}, ${weight}, ${isBaby}, ${gen}, ${isLegendary}, ${isMythical}, ${colorId}, ${evolutionChainId});`)
+    sqlPokemon.add(`INSERT INTO pokemon (id, name, height, weight, is_baby, generation, is_legendary, is_mythical, color_id, evolution_chain_id) VALUES (${pokemon.id}, '${name}', ${height}, ${weight}, ${isBaby}, ${gen}, ${isLegendary}, ${isMythical}, ${colorId}, ${evolutionChainId});`)
     sqlPokemon.add(`INSERT INTO picture (pokemon_id, url) VALUES (${pokemon.id}, '${link}');`)
 
     pokemon.types.forEach(type => {

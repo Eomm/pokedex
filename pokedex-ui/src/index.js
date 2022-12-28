@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createClient, Provider } from 'urql';
 
-const API_BASE_URL = 'http://localhost:3042';
+const API_BASE_URL = '';
 
 const client = createClient({
   url: `${API_BASE_URL}/graphql`,

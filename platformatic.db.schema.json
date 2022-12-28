@@ -166,7 +166,16 @@
               "type": "object",
               "properties": {
                 "graphiql": {
-                  "type": "boolean"
+                  "oneOf": [
+                    {
+                      "type": "boolean"
+                    },
+                    {
+                      "type": "string",
+                      "pattern": "^{PLT_.*$",
+                      "description": "The variable placeholder"
+                    }
+                  ]
                 },
                 "ignore": {
                   "type": "object",
@@ -188,6 +197,11 @@
           "anyOf": [
             {
               "type": "boolean"
+            },
+            {
+              "type": "string",
+              "pattern": "^{PLT_.*$",
+              "description": "The variable placeholder"
             },
             {
               "type": "object",

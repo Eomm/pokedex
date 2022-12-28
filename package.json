@@ -9,6 +9,7 @@
     "standard": "^17.0.0"
   },
   "dependencies": {
+    "@fastify/static": "^6.6.0",
     "platformatic": "^0.12.1"
   },
   "engines": {
