@@ -31,5 +31,5 @@ jobs:
           PORT: 3042 
           PLT_SERVER_HOSTNAME: 127.0.0.1 
           PLT_DEV_MODE: true
-          PLT_CORS_ORIGIN: 'https://[a-z-]*\.deploy\.space|https://platformatic.cloud'
+          PLT_CORS_ORIGIN: '*'
 
