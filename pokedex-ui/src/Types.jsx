@@ -4,10 +4,7 @@ import Select from "react-select";
 
 const query = `
   query {
-    types: element (limit: 99, orderBy: {field: id, direction:ASC} ){ 
-      id
-      name
-    }
+    generations
   }
 `;
 
@@ -22,9 +19,9 @@ function PokemonTypes({ onChange }) {
   }
 
   const options = data
-    ? data.types.map((t) => ({
-        value: t.id,
-        label: t.name,
+    ? data.generations.map((g) => ({
+        value: g,
+        label: `Gen. ${g}`,
       }))
     : [];
 

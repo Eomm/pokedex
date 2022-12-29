@@ -8,7 +8,7 @@ import './App.css';
 
 function App() {
   const [searchPokemon, setSearchPokemon] = useState('');
-  const [typePokemon, setTypePokemon] = useState([]);
+  const [generationsPokemon, setGenerationsPokemon] = useState([]);
 
   return (
     <div>
@@ -20,15 +20,15 @@ function App() {
             placeholder="Search for a Pokemon"
             onChange={e => setSearchPokemon(e.target.value)}
             value={searchPokemon} />
-          <label htmlFor="type">Type</label>
-          <Types onChange={e => setTypePokemon(e)} />
+          <label htmlFor="type">Generation</label>
+          <Types onChange={e => setGenerationsPokemon(e)} />
         </div>
       </header>
       <main>
         <Results
           itemsPerPage={12}
           filterByName={searchPokemon}
-          filterByType={typePokemon} />
+          filterByGeneration={generationsPokemon} />
       </main>
     </div>
   );

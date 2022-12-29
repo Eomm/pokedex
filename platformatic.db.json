@@ -8,7 +8,12 @@
     },
     "cors": {
       "origin": "{PLT_CORS_ORIGIN}",
-      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
       "preflightContinue": false,
       "optionsSuccessStatus": 204
     }
@@ -22,11 +27,17 @@
     "openapi": "{PLT_DEV_MODE}"
   },
   "migrations": {
-    "dir": "migrations"
+    "dir": "migrations",
+    "autoApply": false
   },
-  "plugin": {
-    "path": "plugin.js"
-  },
+  "plugin": [
+    {
+      "path": "plugin.js"
+    },
+    {
+      "path": "plugin-generations.js"
+    }
+  ],
   "types": {
     "autogenerate": true
   }

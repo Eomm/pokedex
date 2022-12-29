@@ -30,7 +30,7 @@ function PokemonResult({ itemsPerPage, filterByName, filterByGeneration }) {
 
   const variables = {
     name: (filterByName && `%${filterByName}%`) || undefined,
-    gen: filterByGeneration,
+    gen: filterByGeneration.length ? filterByGeneration : undefined,
   };
 
   useEffect(() => {
