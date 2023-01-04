@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "start": "platformatic db start",
+    "db:migrations": "platformatic db migrations apply",
+    "db:types": "platformatic db types"
+  },
+  "devDependencies": {
+    "fastify": "^4.10.2",
+    "standard": "^17.0.0"
+  },
+  "dependencies": {
+    "@fastify/static": "^6.6.0",
+    "platformatic": "^0.12.1"
+  },
+  "engines": {
+    "node": "^16.17.0 || ^18.8.0 || >=19"
+  }
+}

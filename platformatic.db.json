@@ -1,0 +1,44 @@
+{
+  "$schema": "./platformatic.db.schema.json",
+  "server": {
+    "hostname": "{PLT_SERVER_HOSTNAME}",
+    "port": "{PORT}",
+    "logger": {
+      "level": "{PLT_SERVER_LOGGER_LEVEL}"
+    },
+    "cors": {
+      "origin": "{PLT_CORS_ORIGIN}",
+      "methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
+      "preflightContinue": false,
+      "optionsSuccessStatus": 204
+    }
+  },
+  "dashboard": false,
+  "core": {
+    "connectionString": "{DATABASE_URL}",
+    "graphql": {
+      "graphiql": "{PLT_DEV_MODE}"
+    },
+    "openapi": "{PLT_DEV_MODE}"
+  },
+  "migrations": {
+    "dir": "migrations",
+    "autoApply": false
+  },
+  "plugin": [
+    {
+      "path": "plugin.js"
+    },
+    {
+      "path": "plugin-generations.js"
+    }
+  ],
+  "types": {
+    "autogenerate": true
+  }
+}
