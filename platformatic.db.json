@@ -40,5 +40,58 @@
   ],
   "types": {
     "autogenerate": true
+  },
+  "authorization": {
+    "rules": [
+      {
+        "role": "anonymous",
+        "entity": "color",
+        "find": true,
+        "save": false,
+        "delete": false
+      },
+      {
+        "role": "anonymous",
+        "entity": "element",
+        "find": true,
+        "save": false,
+        "delete": false
+      },
+      {
+        "role": "anonymous",
+        "entity": "evolutionChain",
+        "find": true,
+        "save": false,
+        "delete": false
+      },
+      {
+        "role": "anonymous",
+        "entity": "evolutionStep",
+        "find": true,
+        "save": false,
+        "delete": false
+      },
+      {
+        "role": "anonymous",
+        "entity": "pokemon",
+        "find": true,
+        "save": false,
+        "delete": false
+      },
+      {
+        "role": "anonymous",
+        "entity": "pokemonElement",
+        "find": true,
+        "save": false,
+        "delete": false
+      },
+      {
+        "role": "anonymous",
+        "entity": "picture",
+        "find": true,
+        "save": false,
+        "delete": false
+      }
+    ]
   }
 }
