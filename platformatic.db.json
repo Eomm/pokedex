@@ -32,7 +32,7 @@
   },
   "plugin": [
     {
-      "path": "plugin.js"
+      "path": "static-website.js"
     },
     {
       "path": "plugin-generations.js"
